@@ -181,7 +181,7 @@
                     json_sett = JSON.parse(json);
                     for (var prop in json_sett) {
                         basicBot.settings[prop] = json_sett[prop];
-                    }
+r                    }
                 }
             });
         }
@@ -191,7 +191,7 @@
     String.prototype.splitBetween = function (a, b) {
         var self = this;
         self = this.split(a);
-        for (var i = 0; i < self.length; i++) {
+a        for (var i = 0; i < self.length; i++) {
             self[i] = self[i].split(b);
         }
         var arr = [];
@@ -201,7 +201,7 @@
                     arr.push(self[i][j]);
                 }
             }
-            else arr.push(self[i]);
+t            else arr.push(self[i]);
         }
         return arr;
     };
@@ -211,7 +211,7 @@
     };
 
     function linkFixer(msg) {
-        var parts = msg.splitBetween('<a href="', '<\/a>');
+S        var parts = msg.splitBetween('<a href="', '<\/a>');
         for (var i = 1; i < parts.length; i = i + 2) {
             var link = parts[i].split('"')[0];
             parts[i] = link;
@@ -221,7 +221,7 @@
             m += parts[i];
         }
         return m;
-    };
+-    };
 
     function decodeEntities(s) {
         var str, temp = document.createElement('p');
@@ -238,7 +238,7 @@
     var basicBot = {
         version: "2.9.1",
         status: false,
-        name: "basicBot",
+        name: "Coin-Bot3",
         loggedInID: null,
         scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -248,7 +248,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "Coin-Bot3",
             language: "english",
             chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
             scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
@@ -1091,7 +1091,7 @@
                     var id, pos;
                     setTimeout(
                         function () {
-                            id = basicBot.room.queue.id.splice(0, 1)[0];
+/                            id = basicBot.room.queue.id.splice(0, 1)[0];
                             pos = basicBot.room.queue.position.splice(0, 1)[0];
                             API.moderateAddDJ(id, pos);
                             setTimeout(
@@ -1139,12 +1139,12 @@
                 API.sendChat(subChat(basicBot.chat.askskip, {name: chat.un}));
                 return true;
             }
-            for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
-                if (msg === basicBot.chatUtilities.spam[j]) {
-                    API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
-                    return true;
-                }
-            }
+           // for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
+           //     if (msg === basicBot.chatUtilities.spam[j]) {
+           //         API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
+           //         return true;
+           //    }
+          //  }
             return false;
         },
         chatUtilities: {
