@@ -181,7 +181,7 @@
                     json_sett = JSON.parse(json);
                     for (var prop in json_sett) {
                         basicBot.settings[prop] = json_sett[prop];
-r                    }
+                    }
                 }
             });
         }
@@ -191,7 +191,7 @@ r                    }
     String.prototype.splitBetween = function (a, b) {
         var self = this;
         self = this.split(a);
-a        for (var i = 0; i < self.length; i++) {
+        for (var i = 0; i < self.length; i++) {
             self[i] = self[i].split(b);
         }
         var arr = [];
@@ -201,7 +201,7 @@ a        for (var i = 0; i < self.length; i++) {
                     arr.push(self[i][j]);
                 }
             }
-t            else arr.push(self[i]);
+            else arr.push(self[i]);
         }
         return arr;
     };
@@ -211,7 +211,7 @@ t            else arr.push(self[i]);
     };
 
     function linkFixer(msg) {
-S        var parts = msg.splitBetween('<a href="', '<\/a>');
+        var parts = msg.splitBetween('<a href="', '<\/a>');
         for (var i = 1; i < parts.length; i = i + 2) {
             var link = parts[i].split('"')[0];
             parts[i] = link;
@@ -221,7 +221,7 @@ S        var parts = msg.splitBetween('<a href="', '<\/a>');
             m += parts[i];
         }
         return m;
--    };
+    };
 
     function decodeEntities(s) {
         var str, temp = document.createElement('p');
@@ -238,7 +238,7 @@ S        var parts = msg.splitBetween('<a href="', '<\/a>');
     var basicBot = {
         version: "2.9.1",
         status: false,
-        name: "Coin-Bot3",
+        name: "basicBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -248,7 +248,7 @@ S        var parts = msg.splitBetween('<a href="', '<\/a>');
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "Coin-Bot3",
+            botName: "Coin-Star3",
             language: "english",
             chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
             scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
@@ -1091,7 +1091,7 @@ S        var parts = msg.splitBetween('<a href="', '<\/a>');
                     var id, pos;
                     setTimeout(
                         function () {
-/                            id = basicBot.room.queue.id.splice(0, 1)[0];
+                            id = basicBot.room.queue.id.splice(0, 1)[0];
                             pos = basicBot.room.queue.position.splice(0, 1)[0];
                             API.moderateAddDJ(id, pos);
                             setTimeout(
@@ -1139,12 +1139,12 @@ S        var parts = msg.splitBetween('<a href="', '<\/a>');
                 API.sendChat(subChat(basicBot.chat.askskip, {name: chat.un}));
                 return true;
             }
-           // for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
-           //     if (msg === basicBot.chatUtilities.spam[j]) {
-           //         API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
-           //         return true;
-           //    }
-          //  }
+            for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
+                if (msg === basicBot.chatUtilities.spam[j]) {
+                    //API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
+                    return true;
+                }
+            }
             return false;
         },
         chatUtilities: {
@@ -1285,13 +1285,13 @@ S        var parts = msg.splitBetween('<a href="', '<\/a>');
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-                'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
+                'brbr', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
                 'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
+                'hitler', 'ashua', 'ahsu', 'ashau', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'shit', 'hell', 'ass', 'bitch', 'dick', 'whore'
             ]
         },
         connectAPI: function () {
