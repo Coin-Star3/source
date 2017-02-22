@@ -1141,9 +1141,20 @@
             }
             for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
                 if (msg === basicBot.chatUtilities.spam[j]) {
-                    //API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
+                    API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
                     return true;
                 }
+            }
+             for (var j = 0; j < basicBot.chatUtilities.curses.length; j++) {
+
+                if (msg === basicBot.chatUtilities.curses[j]) {
+
+                    API.sendChat(subChat(basicBot.chat.curses, {name: chat.un}));
+
+                    return true;
+
+                }
+
             }
             return false;
         },
