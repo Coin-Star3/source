@@ -1302,7 +1302,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'shit', 'hell', 'ass', 'bitch', 'dick', 'whore', 'damn', 'damm'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'shit', 'hell', 'ass', 'bitch', 'dick', 'whore', 'damn', 'damm', 'fuck', 'mofo', 'ass', 'lmao', 'wtf', 'shit'
             ]
         },
         connectAPI: function () {
