@@ -244,6 +244,7 @@
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Coin-Star3/source/master/lang/en.json",
         chat: null,
+
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
